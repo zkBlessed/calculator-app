@@ -1,0 +1,102 @@
+:root {
+  /* Colors HEX */
+  --sky-blue: #8ecae6;
+  --blue-green: #219ebc;
+  --prussian-blue: #023047;
+  --selective-yellow: #ffb703;
+  --ut-orange: #fb8500;
+  --gray: #2D2A37;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background:linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%) no-repeat, var(--prussian-blue);
+  display: grid;
+  place-content: center;
+}
+
+body * {
+  font-family: 'Rubik', sans-serif;
+  color: #EBEBEB;
+}
+
+#calc {
+  width: 22rem;
+  height: 34rem;
+  padding-top: 50px;
+  padding-inline: 30px;
+  background: var(--gray);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04), 0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26), 0px 8px 17px rgba(0, 0, 0, 0.29), inset 0px 6px 8px rgba(255, 255, 255, 0.1), inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+  border-radius: 45px;
+}
+
+#display {
+  padding-inline: 20px;
+}
+
+#calculus {
+  text-align: right;
+  font-size: 20px;
+  line-height: 140%;
+  opacity: 0.4;
+}
+
+#result {
+  display: flex;
+  justify-content: space-between;
+  font-size: 36px;
+  line-height: 140%;
+}
+
+#result img {
+  opacity: .4;
+}
+
+#keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#keyboard button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), var(--gray);
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+  border-radius: 999px;  
+  font-size: 24px;
+}
+
+#keyboard button:hover {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(128, 128, 128, 0.05) 100%);
+}
+
+#keyboard button:active {
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.26), inset 0px 0px 2px rgba(0, 0, 0, 0.29);
+}
+
+#keyboard .operation-key {
+  background-color: var(--ut-orange);
+}
+
+#keyboard .other-key {
+  color: var(--ut-orange);
+}
+
+#keyboard #equal {
+  background-color: var(--blue-green);
+}
